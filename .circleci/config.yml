@@ -5,7 +5,7 @@
        - image: circleci/ruby:2.4.1
      steps:
        - checkout
-       - run: echo "This is v0.0.4 fix"
+       - run: echo "This is v1.0.0 fix"
        - run: sleep 5
    two:
      docker:
