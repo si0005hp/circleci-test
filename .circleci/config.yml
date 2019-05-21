@@ -5,20 +5,20 @@
        - image: circleci/ruby:2.4.1
      steps:
        - checkout
-       - run: echo "A first hello"
-       - run: sleep 25
+       - run: echo "This is v0.0.3 fix"
+       - run: sleep 5
    two:
      docker:
        - image: circleci/ruby:2.4.1
      steps:
        - checkout
        - run: echo "A more familiar hi"
-       - run: sleep 15
+       - run: sleep 3
  workflows:
    version: 2
    one_and_two:
      jobs:
-       - release:
+       - one:
            filters:
              branches:
                ignore: /.*/
