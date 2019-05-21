@@ -18,9 +18,10 @@
    version: 2
    one_and_two:
      jobs:
-       - one
+       - release:
            filters:
              branches:
-               only:
-                 - production
-                 
+               ignore: /.*/
+             tags:
+               only: /v[0-9]+(\.[0-9]+)*/
+
